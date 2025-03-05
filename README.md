@@ -1,4 +1,4 @@
-# Deep Learning Final Project: Text Classification Using Simple RNN
+# Deep Learning Final Project: Context-Aware Literary Translation Enhancement
 
 ## Project Overview
 
