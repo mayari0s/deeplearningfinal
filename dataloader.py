@@ -3,10 +3,14 @@ from transformers import AutoTokenizer
 from datasets import Dataset, DatasetDict
 from torch.utils.data import DataLoader
 from transformers import DataCollatorWithPadding
+from pathlib import Path
 
-# Define the paths to the cleaned data files
-books_path = "/Users/mayarios/Desktop/deeplearning/project/cleaned_books_data.json"
-news_path = "/Users/mayarios/Desktop/deeplearning/project/cleaned_news_data.json"
+# Define the base directory (this will work on any platform)
+base_dir = Path.home() / "Desktop" / "deeplearning" / "project"
+
+# Define the paths to the cleaned data files using universal paths
+books_path = base_dir / "cleaned_books_data.json"
+news_path = base_dir / "cleaned_news_data.json"
 
 # Load the books data
 with open(books_path, 'r') as f:
