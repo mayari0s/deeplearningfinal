@@ -19,7 +19,6 @@ for epoch in range(n_epochs):
     model.train()
     _loss = []
     
-    # Training Loop
     for batch in tqdm(train_dataloader):
         optimizer.zero_grad()
         output = model(batch['input_ids'])
@@ -28,7 +27,6 @@ for epoch in range(n_epochs):
         optimizer.step()
         _loss.append(loss.item())
     
-    # Save the last 10 training losses
     train_loss.append(np.mean(_loss[-10:]))
     
     model.eval()
@@ -36,22 +34,18 @@ for epoch in range(n_epochs):
         all_preds = []
         all_labels = []
         
-        # Evaluation Loop
         for test_batch in test_dataloader:
             test_output = model(test_batch['input_ids'])
             test_label = test_batch['labels'].float()
             loss = loss_fn(test_output, test_label)
             test_loss.append(loss.item())
             
-            # Store predictions and true labels for metrics
             all_preds.append(test_output)
             all_labels.append(test_label)
 
-        # Concatenate all predictions and labels
         all_preds = torch.cat(all_preds)
         all_labels = torch.cat(all_labels)
         
-        # Calculate accuracy and F1 score
         accuracy = accuracy_metric(all_preds.round(), all_labels)
         f1 = f1_metric(all_preds.round(), all_labels)
         
