@@ -46,4 +46,15 @@ Make sure the following packages are installed:
 
 ## Results
 
-The metrics used to evaluate model success are 
+I evaluated this model using Accuracy, F1 score, and loss function. Accuracy will measure the percentage of correctly classified texts (news vs. literature). F1 score will be a balanced measure of precision and recall used for ensuring that both categories are classified correctly. The loss function will monitor the loss during training and will help ensure the model is learning effectively without overfitting.
+
+The results of the training and evaluation model was impressive: Accuracy: 99.2% after five Epochs, F1 Score: 0.9916, Train Loss: 0.0428. However, this did not translate to the post-training classifier algorithm. 
+
+Despite achieving high accuracy in classifying text as either literature or news sources, the model exhibited significant limitations due to overfitting. The recurrent neural network (RNN) architecture led to a high degree of memorization, preventing the model from generalizing effectively to new, unseen data. Instead of learning underlying patterns, the model retained training examples too rigidly, resulting in poor adaptability to novel inputs.  
+
+The RNN was vulnerable to exploding gradients, which contributed to an unstable training process. This issue led to a high loss function, further reducing the model’s effectiveness in real-world text classification tasks. While the training and evaluation algorithms performed well on the given dataset, the model's inability to generalize suggests that improvements such as regularization techniques, increased dataset diversity, or alternative architectures (e.g., transformers) may be necessary to enhance performance. The largest limitation of this model is that the high accuracy indicates that the model effectively distinguished tokenized text as literature or news but does not guarantee its reliability in real-world applications with new user-generated input.  
+
+
+
+
+
