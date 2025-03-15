@@ -54,6 +54,10 @@ Despite achieving high accuracy in classifying text as either literature or news
 
 The RNN was vulnerable to exploding gradients, which contributed to an unstable training process. This issue led to a high loss function, further reducing the model’s effectiveness in real-world text classification tasks. While the training and evaluation algorithms performed well on the given dataset, the model's inability to generalize suggests that improvements such as regularization techniques, increased dataset diversity, or alternative architectures (e.g., transformers) may be necessary to enhance performance. The largest limitation of this model is that the high accuracy indicates that the model effectively distinguished tokenized text as literature or news but does not guarantee its reliability in real-world applications with new user-generated input.  
 
+<img width="377" alt="Screenshot 2025-03-15 at 12 18 37 AM" src="https://github.com/user-attachments/assets/b44e2b2a-bd89-40e4-942e-e54968bcd43b" />
+
+
+
 
 
 
