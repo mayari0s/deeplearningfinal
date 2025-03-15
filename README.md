@@ -50,14 +50,17 @@ I evaluated this model using Accuracy, F1 score, and loss function. Accuracy wil
 
 The results of the training and evaluation model was impressive: Accuracy: 99.2% after five Epochs, F1 Score: 0.9916, Train Loss: 0.0428. However, this did not translate to the post-training classifier algorithm. 
 
-Despite achieving high accuracy in classifying text as either literature or news sources, the model exhibited significant limitations due to overfitting. The recurrent neural network (RNN) architecture led to a high degree of memorization, preventing the model from generalizing effectively to new, unseen data. Instead of learning underlying patterns, the model retained training examples too rigidly, resulting in poor adaptability to novel inputs.  
+These scores indicate that the model struggled with effective classification. Unlike the initially promising training results, the final evaluation suggests poor generalization and a lack of meaningful pattern recognition. The low F1 score further highlights an imbalance in classification, where one category likely dominates the predictions.
 
-The RNN was vulnerable to exploding gradients, which contributed to an unstable training process. This issue led to a high loss function, further reducing the model’s effectiveness in real-world text classification tasks. While the training and evaluation algorithms performed well on the given dataset, the model's inability to generalize suggests that improvements such as regularization techniques, increased dataset diversity, or alternative architectures (e.g., transformers) may be necessary to enhance performance. The largest limitation of this model is that the high accuracy indicates that the model effectively distinguished tokenized text as literature or news but does not guarantee its reliability in real-world applications with new user-generated input.  
+## Limitations
 
-<img width="377" alt="Screenshot 2025-03-15 at 12 18 37 AM" src="https://github.com/user-attachments/assets/b44e2b2a-bd89-40e4-942e-e54968bcd43b" />
+The RNN was vulnerable to exploding gradients, which contributed to an unstable training process. This issue led to a high loss function, further reducing the model’s effectiveness in real-world text classification tasks. While the training and evaluation algorithms performed well on the given dataset, the model's inability to generalize suggests that improvements such as regularization techniques, increased dataset diversity, or alternative architectures (e.g., transformers) may be necessary to enhance performance. The largest limitation of this model is that the high accuracy indicates that the model effectively distinguished tokenized text as literature or news but does not guarantee its reliability in real-world applications with new user-generated input. This model's practical limitation is the time it takes to train each epoch. Each epoch takes around 2 minutes to train, meaning that if I wanted to increase accuracy and F1 score, I would have to wait 10 minutes for the model to run again. I do not think that the architecture of this model is sophisticated enough to warrant such a long training period and in the future, I think that I would train the model architecture to an LSTM to address these vanishing gradiants and improve model accuracy. 
 
 
 
+
+
+<img width="813" alt="Screenshot 2025-03-15 at 12 22 29 AM" src="https://github.com/user-attachments/assets/d522539e-56a1-452c-8336-2b0a5515f44b" />
 
 
 
