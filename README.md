@@ -1,4 +1,4 @@
-# Deep Learning Final Project: Context-Aware Literary Translation Enhancement
+# Deep Learning Final Project: Context-Aware Translation Enhancement
 
 ## Project Overview
 
